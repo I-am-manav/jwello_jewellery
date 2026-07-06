@@ -11,8 +11,7 @@ import UserReview from "./models/UserReview.js";
 import jwt from "jsonwebtoken";
 import express from "express";
 import bcrypt from "bcryptjs";
-import aut from
-  dotenv.config();
+dotenv.config();
 import { use } from "react";
 const app = express();
 const PORT = process.env.PORT
