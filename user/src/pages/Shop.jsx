@@ -31,8 +31,7 @@ function Shop() {
             JSON.parse(localStorage.getItem(`jwello_wishlist_${user.email}`)) || [];
 
         setWishlistIds(wishlist.map(item => item._id));
-
-    }, [user]);
+    }, []);
     const [products, setProducts] = useState([])
     const [search, setSearch] = useState("");
     const [metal, setMetal] = useState("all");
