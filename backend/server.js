@@ -1,8 +1,8 @@
+import { use } from "react";
 import mongoose from "mongoose";
 import cors from "cors";
 import Razorpay from "razorpay";
 import dotenv from "dotenv";
-import React from "react";
 import http from "http";
 import { Server } from "socket.io";
 import Product from "./models/Product.js"
@@ -13,7 +13,6 @@ import jwt from "jsonwebtoken";
 import express from "express";
 import bcrypt from "bcryptjs";
 dotenv.config();
-import { use } from "react";
 const app = express();
 const PORT = process.env.PORT
 app.use(cors({
