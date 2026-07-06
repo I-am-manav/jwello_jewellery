@@ -1,4 +1,3 @@
-import { use } from "react";
 import mongoose from "mongoose";
 import cors from "cors";
 import Razorpay from "razorpay";
