@@ -19,10 +19,13 @@ function Header() {
         navigate("/login");
     };
     const handleCartClick = (e) => {
-        if (!user) {
-            e.preventDefault(); // Stop opening /cart
+        const currentUser = JSON.parse(localStorage.getItem("jwello_user"));
+
+        if (!currentUser) {
+            e.preventDefault();
             alert("Login required");
-            navigate("/login");
+            navigate("/login", { replace: true });
+            return;
         }
     };
 
