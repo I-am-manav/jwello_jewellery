@@ -11,12 +11,14 @@ import UserReview from "./models/UserReview.js";
 import jwt from "jsonwebtoken";
 import express from "express";
 import bcrypt from "bcryptjs";
-dotenv.config();
-
+import aut from
+  dotenv.config();
+import { use } from "react";
 const app = express();
 const PORT = process.env.PORT
-
-app.use(cors({ origin: true, credentials: true }));
+app.use(cors({
+  origin: "*"
+}));
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
 const server = http.createServer(app);
@@ -1498,4 +1500,7 @@ app.get("/top-products", async (req, res) => {
 /* Start */
 server.listen(PORT, () => {
   console.log("Server running ");
+});
+app.get("/test", (req, res) => {
+  res.send("Backend Updated Successfully");
 });
